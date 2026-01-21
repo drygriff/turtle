@@ -33,6 +33,86 @@
     </header>
 
     <main class="page">
+      <section class="turtle-tools" id="tools">
+        <div class="section-title">
+          <h2>Turtle quick reference</h2>
+          <p>Common stuff you might want to do.</p>
+        </div>
+        <div class="tool-grid">
+          <div class="tool-group">
+            <span class="tool-group-title">Move + turn</span>
+          </div>
+          <article class="tool-card">
+            <h3 class="tool-title"><code>forward(distance)</code></h3>
+            <p class="tool-desc">Move ahead by pixels in the current heading.</p>
+          </article>
+          <article class="tool-card">
+            <h3 class="tool-title"><code>right(angle)</code></h3>
+            <p class="tool-desc">Turn clockwise by degrees.</p>
+          </article>
+          <article class="tool-card">
+            <h3 class="tool-title"><code>left(angle)</code></h3>
+            <p class="tool-desc">Turn counterclockwise by degrees.</p>
+          </article>
+          <article class="tool-card">
+            <h3 class="tool-title"><code>goto(x, y)</code></h3>
+            <p class="tool-desc">Jump to coordinates without changing heading.</p>
+          </article>
+          <article class="tool-card">
+            <h3 class="tool-title"><code>setheading(angle)</code></h3>
+            <p class="tool-desc">Point the turtle in a specific direction.</p>
+          </article>
+
+          <div class="tool-group">
+            <span class="tool-group-title">Pen control</span>
+          </div>
+          <article class="tool-card">
+            <h3 class="tool-title"><code>penup()</code></h3>
+            <p class="tool-desc">Lift the pen to move without drawing.</p>
+          </article>
+          <article class="tool-card">
+            <h3 class="tool-title"><code>pendown()</code></h3>
+            <p class="tool-desc">Put the pen back down to draw again.</p>
+          </article>
+          <article class="tool-card">
+            <h3 class="tool-title"><code>circle(radius)</code></h3>
+            <p class="tool-desc">Draw a circle with the given radius.</p>
+          </article>
+
+          <div class="tool-group">
+            <span class="tool-group-title">Style</span>
+          </div>
+          <article class="tool-card">
+            <h3 class="tool-title"><code>speed(value)</code></h3>
+            <p class="tool-desc">Set animation speed (0 is fastest).</p>
+          </article>
+          <article class="tool-card">
+            <h3 class="tool-title"><code>pensize(width)</code></h3>
+            <p class="tool-desc">Change stroke width for thicker lines.</p>
+          </article>
+          <article class="tool-card">
+            <h3 class="tool-title"><code>color("name")</code></h3>
+            <p class="tool-desc">Pick a pen color (names or hex codes).</p>
+          </article>
+
+          <div class="tool-group">
+            <span class="tool-group-title">Fill + background</span>
+          </div>
+          <article class="tool-card">
+            <h3 class="tool-title"><code>begin_fill()</code></h3>
+            <p class="tool-desc">Start filling the next closed shape.</p>
+          </article>
+          <article class="tool-card">
+            <h3 class="tool-title"><code>end_fill()</code></h3>
+            <p class="tool-desc">Stop filling and paint the shape.</p>
+          </article>
+          <article class="tool-card">
+            <h3 class="tool-title"><code>bgcolor("name")</code></h3>
+            <p class="tool-desc">Set the background color of the canvas.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="gallery" id="gallery">
         <div class="section-title">
           <h1>Examples</h1>
@@ -49,9 +129,9 @@
               <pre><code>import turtle as t
 
 t.speed(0)
-for size in range(5, 160, 5):
+for size in range(10, 130, 10):
     t.forward(size)
-    t.right(91)
+    t.right(95)
 
 t.done()</code></pre>
               <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
@@ -67,13 +147,10 @@ t.done()</code></pre>
               <pre><code>import turtle as t
 
 t.speed(0)
-for size in range(120, 40, -20):
+for size in range(120, 30, -30):
     for _ in range(5):
         t.forward(size)
         t.right(72)
-    t.penup()
-    t.forward(10)
-    t.pendown()
 
 t.done()</code></pre>
               <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
@@ -89,9 +166,9 @@ t.done()</code></pre>
               <pre><code>import turtle as t
 
 t.speed(0)
-for _ in range(60):
+for _ in range(24):
     t.forward(120)
-    t.right(123)
+    t.right(137)
 
 t.done()</code></pre>
               <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
@@ -107,9 +184,9 @@ t.done()</code></pre>
               <pre><code>import turtle as t
 
 t.speed(0)
-for _ in range(36):
+for _ in range(18):
     t.circle(60)
-    t.right(10)
+    t.right(20)
 
 t.done()</code></pre>
               <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
@@ -125,7 +202,7 @@ t.done()</code></pre>
               <pre><code>import turtle as t
 
 t.speed(0)
-for radius in range(20, 140, 10):
+for radius in range(30, 120, 20):
     t.penup()
     t.goto(0, -radius)
     t.pendown()
@@ -145,11 +222,92 @@ t.done()</code></pre>
               <pre><code>import turtle as t
 
 t.speed(0)
-for _ in range(36):
+for _ in range(18):
     for _ in range(4):
-        t.forward(80)
+        t.forward(70)
         t.right(90)
-    t.right(10)
+    t.right(20)
+
+t.done()</code></pre>
+              <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
+            </div>
+          </article>
+
+          <article class="turtle-card" data-card role="button" tabindex="0" aria-label="Copy code for Triangle bloom" style="--card-accent: #7cf5ff;">
+            <div class="preview">
+              <svg class="preview-art" viewBox="0 0 200 200" aria-hidden="true"></svg>
+              <span class="tag">Triangle bloom</span>
+            </div>
+            <div class="code-overlay">
+              <pre><code>import turtle as t
+
+t.speed(0)
+for _ in range(12):
+    for _ in range(3):
+        t.forward(90)
+        t.right(120)
+    t.right(30)
+
+t.done()</code></pre>
+              <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
+            </div>
+          </article>
+
+          <article class="turtle-card" data-card role="button" tabindex="0" aria-label="Copy code for Hex spiral" style="--card-accent: #9b8cff;">
+            <div class="preview">
+              <svg class="preview-art" viewBox="0 0 200 200" aria-hidden="true"></svg>
+              <span class="tag">Hex spiral</span>
+            </div>
+            <div class="code-overlay">
+              <pre><code>import turtle as t
+
+t.speed(0)
+for size in range(20, 140, 20):
+    for _ in range(6):
+        t.forward(size)
+        t.right(60)
+    t.right(20)
+
+t.done()</code></pre>
+              <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
+            </div>
+          </article>
+
+          <article class="turtle-card" data-card role="button" tabindex="0" aria-label="Copy code for Offset rings" style="--card-accent: #66ffbf;">
+            <div class="preview">
+              <svg class="preview-art" viewBox="0 0 200 200" aria-hidden="true"></svg>
+              <span class="tag">Offset rings</span>
+            </div>
+            <div class="code-overlay">
+              <pre><code>import turtle as t
+
+t.speed(0)
+for radius in range(30, 90, 15):
+    t.penup()
+    t.goto(radius, 0)
+    t.pendown()
+    t.circle(radius)
+
+t.done()</code></pre>
+              <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
+            </div>
+          </article>
+
+          <article class="turtle-card" data-card role="button" tabindex="0" aria-label="Copy code for Corner weave" style="--card-accent: #f8b06f;">
+            <div class="preview">
+              <svg class="preview-art" viewBox="0 0 200 200" aria-hidden="true"></svg>
+              <span class="tag">Corner weave</span>
+            </div>
+            <div class="code-overlay">
+              <pre><code>import turtle as t
+
+t.speed(0)
+for _ in range(16):
+    t.forward(120)
+    t.right(90)
+    t.forward(60)
+    t.right(90)
+    t.right(22.5)
 
 t.done()</code></pre>
               <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>

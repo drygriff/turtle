@@ -139,10 +139,18 @@ img {
 
 .page {
   padding: 2.5rem 6vw 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
 }
 
 .section-title h1 {
   font-size: clamp(1.9rem, 3vw, 2.6rem);
+  margin: 0 0 0.5rem;
+}
+
+.section-title h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
   margin: 0 0 0.5rem;
 }
 
@@ -155,6 +163,66 @@ img {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.turtle-tools {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+
+.tool-group {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.35rem 0.2rem 0;
+}
+
+.tool-group-title {
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+.tool-group::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, rgba(22, 176, 230, 0.35), transparent);
+}
+
+.tool-card {
+  padding: 1.1rem 1.2rem;
+  border-radius: 16px;
+  background: rgba(8, 12, 24, 0.7);
+  border: 1px solid rgba(22, 176, 230, 0.2);
+  box-shadow: 0 16px 32px rgba(3, 5, 18, 0.35);
+}
+
+.tool-title {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  color: var(--text-0);
+}
+
+.tool-title code {
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-size: 0.95rem;
+  color: #d8e9ff;
+}
+
+.tool-desc {
+  margin: 0;
+  color: var(--text-1);
+  font-size: 0.9rem;
 }
 
 .card-grid {
