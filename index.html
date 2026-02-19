@@ -1,10 +1,10 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Handsworth Coding Club Turtle Gallery</title>
-    <meta name="description" content="Turtle design gallery and short Python snippets from Handsworth Coding Club.">
+    <meta name="description" content="Turtle design gallery, starter code, and short Python snippets from Handsworth Coding Club.">
     <link rel="icon" href="Icons/ClubIconTransparentBlue.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,8 +27,8 @@
         </div>
       </div>
       <div class="header-note">
-        <span class="note-title">Hover to reveal code</span>
-        <span class="note-subtitle">Click a card to copy the snippet.</span>
+        <span class="note-title">Etch a sketch starter + examples</span>
+        <span class="note-subtitle">Copy the starter or click any card to copy.</span>
       </div>
     </header>
 
@@ -111,6 +111,38 @@
             <p class="tool-desc">Set the background color of the canvas.</p>
           </article>
         </div>
+      </section>
+
+      <section class="starter" id="starter">
+        <div class="section-title">
+          <h1>Etch a sketch starter</h1>
+          <p>Copy this starter and then replace each print with turtle movement.</p>
+        </div>
+
+        <article class="starter-card">
+          <button class="copy-button" type="button" data-copy-button aria-live="polite">Copy code</button>
+          <pre><code data-copy-code>import turtle as t
+
+def moveUp():
+    print("up")
+
+def moveDown():
+    print("down")
+
+def moveLeft():
+    print("left")
+
+def moveRight():
+    print("right")
+
+t.listen()
+t.onkey(moveUp, "w")
+t.onkey(moveDown, "s")
+t.onkey(moveLeft, "a")
+t.onkey(moveRight, "d")
+
+t.done()</code></pre>
+        </article>
       </section>
 
       <section class="gallery" id="gallery">

@@ -371,3 +371,27 @@ function buildPathData(paths) {
 
   return segments.join(" ");
 }
+
+const starterCopyButton = document.querySelector("[data-copy-button]");
+const starterCodeElement = document.querySelector("[data-copy-code]");
+
+if (starterCopyButton && starterCodeElement) {
+  const starterCode = starterCodeElement.textContent.trim();
+  const defaultButtonLabel = starterCopyButton.textContent;
+
+  starterCopyButton.addEventListener("click", () => {
+    copyToClipboard(starterCode)
+      .then(() => {
+        starterCopyButton.textContent = "Copied";
+        window.setTimeout(() => {
+          starterCopyButton.textContent = defaultButtonLabel;
+        }, 1400);
+      })
+      .catch(() => {
+        starterCopyButton.textContent = "Copy failed";
+        window.setTimeout(() => {
+          starterCopyButton.textContent = defaultButtonLabel;
+        }, 1400);
+      });
+  });
+}
