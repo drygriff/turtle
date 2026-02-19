@@ -1,4 +1,4 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
 :root {
   color-scheme: dark;
@@ -391,4 +391,55 @@ img {
   .code-overlay {
     transition: none;
   }
+}
+
+.starter {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.starter-card {
+  padding: 1.1rem 1.2rem;
+  border-radius: 16px;
+  background: rgba(8, 12, 24, 0.7);
+  border: 1px solid rgba(22, 176, 230, 0.2);
+  box-shadow: 0 16px 32px rgba(3, 5, 18, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.copy-button {
+  align-self: flex-end;
+  border: 1px solid rgba(22, 176, 230, 0.4);
+  background: rgba(22, 176, 230, 0.14);
+  color: #d8e9ff;
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+}
+
+.copy-button:hover,
+.copy-button:focus-visible {
+  border-color: rgba(22, 176, 230, 0.7);
+  background: rgba(22, 176, 230, 0.22);
+}
+
+.starter-card pre {
+  margin: 0;
+  padding: 0.95rem;
+  border-radius: 12px;
+  background: rgba(4, 6, 16, 0.9);
+  border: 1px solid rgba(22, 176, 230, 0.2);
+  color: #d8e9ff;
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  overflow-x: auto;
 }
