@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Handsworth Coding Club Turtle Cheat Sheet</title>
-    <meta name="description" content="Turtle quick reference and Etch a Sketch starter code from Handsworth Coding Club.">
+    <title>Handsworth Coding Club Turtle Gallery</title>
+    <meta name="description" content="Turtle design gallery, starter code, and short Python snippets from Handsworth Coding Club.">
     <link rel="icon" href="Icons/ClubIconTransparentBlue.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,12 +23,12 @@
         <img src="Icons/ClubIcon.svg" alt="Handsworth Coding Club logo">
         <div>
           <span class="club-name">Handsworth Coding Club</span>
-          <span class="club-tag">Python Turtle Cheat Sheet</span>
+          <span class="club-tag">Python Turtle Gallery</span>
         </div>
       </div>
       <div class="header-note">
-        <span class="note-title">Etch a sketch starter</span>
-        <span class="note-subtitle">Use WASD and build from here.</span>
+        <span class="note-title">Etch a sketch starter + examples</span>
+        <span class="note-subtitle">Copy the starter or click any card to copy.</span>
       </div>
     </header>
 
@@ -143,6 +143,219 @@ t.onkey(moveRight, "d")
 
 t.done()</code></pre>
         </article>
+      </section>
+
+      <section class="gallery" id="gallery">
+        <div class="section-title">
+          <h1>Examples</h1>
+          <p>Some fun shapes to get you started</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="turtle-card" data-card role="button" tabindex="0" aria-label="Copy code for Cosmic steps" style="--card-accent: #16b0e6;">
+            <div class="preview">
+              <svg class="preview-art" viewBox="0 0 200 200" aria-hidden="true"></svg>
+              <span class="tag">Cosmic steps</span>
+            </div>
+            <div class="code-overlay">
+              <pre><code>import turtle
+t = turtle.Turtle()
+
+t.speed(0)
+for size in range(10, 130, 10):
+    t.forward(size)
+    t.right(95)
+
+t.done()</code></pre>
+              <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
+            </div>
+          </article>
+
+          <article class="turtle-card" data-card role="button" tabindex="0" aria-label="Copy code for Layered polygon" style="--card-accent: #44f2ff;">
+            <div class="preview">
+              <svg class="preview-art" viewBox="0 0 200 200" aria-hidden="true"></svg>
+              <span class="tag">Layered polygon</span>
+            </div>
+            <div class="code-overlay">
+              <pre><code>import turtle
+t = turtle.Turtle()
+
+t.speed(0)
+for size in range(120, 30, -30):
+    for i in range(5):
+        t.forward(size)
+        t.right(72)
+
+t.done()</code></pre>
+              <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
+            </div>
+          </article>
+
+          <article class="turtle-card" data-card role="button" tabindex="0" aria-label="Copy code for Starlight loop" style="--card-accent: #8fb6ff;">
+            <div class="preview">
+              <svg class="preview-art" viewBox="0 0 200 200" aria-hidden="true"></svg>
+              <span class="tag">Starlight loop</span>
+            </div>
+            <div class="code-overlay">
+              <pre><code>import turtle
+t = turtle.Turtle()
+
+t.speed(0)
+for i in range(24):
+    t.forward(120)
+    t.right(137)
+
+t.done()</code></pre>
+              <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
+            </div>
+          </article>
+
+          <article class="turtle-card" data-card role="button" tabindex="0" aria-label="Copy code for Rosette orbit" style="--card-accent: #b77bff;">
+            <div class="preview">
+              <svg class="preview-art" viewBox="0 0 200 200" aria-hidden="true"></svg>
+              <span class="tag">Rosette orbit</span>
+            </div>
+            <div class="code-overlay">
+              <pre><code>import turtle
+t = turtle.Turtle()
+
+t.speed(0)
+for i in range(18):
+    t.circle(60)
+    t.right(20)
+
+t.done()</code></pre>
+              <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
+            </div>
+          </article>
+
+          <article class="turtle-card" data-card role="button" tabindex="0" aria-label="Copy code for Signal rings" style="--card-accent: #64ffd3;">
+            <div class="preview">
+              <svg class="preview-art" viewBox="0 0 200 200" aria-hidden="true"></svg>
+              <span class="tag">Signal rings</span>
+            </div>
+            <div class="code-overlay">
+              <pre><code>import turtle
+t = turtle.Turtle()
+
+t.speed(0)
+for radius in range(30, 120, 20):
+    t.penup()
+    t.goto(0, -radius)
+    t.pendown()
+    t.circle(radius)
+
+t.done()</code></pre>
+              <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
+            </div>
+          </article>
+
+          <article class="turtle-card" data-card role="button" tabindex="0" aria-label="Copy code for Orbiting squares" style="--card-accent: #ff8dd8;">
+            <div class="preview">
+              <svg class="preview-art" viewBox="0 0 200 200" aria-hidden="true"></svg>
+              <span class="tag">Orbiting squares</span>
+            </div>
+            <div class="code-overlay">
+              <pre><code>import turtle
+t = turtle.Turtle()
+
+t.speed(0)
+for i in range(18):
+    for i in range(4):
+        t.forward(70)
+        t.right(90)
+    t.right(20)
+
+t.done()</code></pre>
+              <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
+            </div>
+          </article>
+
+          <article class="turtle-card" data-card role="button" tabindex="0" aria-label="Copy code for Triangle bloom" style="--card-accent: #7cf5ff;">
+            <div class="preview">
+              <svg class="preview-art" viewBox="0 0 200 200" aria-hidden="true"></svg>
+              <span class="tag">Triangle bloom</span>
+            </div>
+            <div class="code-overlay">
+              <pre><code>import turtle
+t = turtle.Turtle()
+
+t.speed(0)
+for i in range(12):
+    for i in range(3):
+        t.forward(90)
+        t.right(120)
+    t.right(30)
+
+t.done()</code></pre>
+              <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
+            </div>
+          </article>
+
+          <article class="turtle-card" data-card role="button" tabindex="0" aria-label="Copy code for Hex spiral" style="--card-accent: #9b8cff;">
+            <div class="preview">
+              <svg class="preview-art" viewBox="0 0 200 200" aria-hidden="true"></svg>
+              <span class="tag">Hex spiral</span>
+            </div>
+            <div class="code-overlay">
+              <pre><code>import turtle
+t = turtle.Turtle()
+
+t.speed(0)
+for size in range(20, 140, 20):
+    for i in range(6):
+        t.forward(size)
+        t.right(60)
+    t.right(20)
+
+t.done()</code></pre>
+              <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
+            </div>
+          </article>
+
+          <article class="turtle-card" data-card role="button" tabindex="0" aria-label="Copy code for Offset rings" style="--card-accent: #66ffbf;">
+            <div class="preview">
+              <svg class="preview-art" viewBox="0 0 200 200" aria-hidden="true"></svg>
+              <span class="tag">Offset rings</span>
+            </div>
+            <div class="code-overlay">
+              <pre><code>import turtle
+t = turtle.Turtle()
+
+t.speed(0)
+for radius in range(30, 90, 15):
+    t.penup()
+    t.goto(radius, 0)
+    t.pendown()
+    t.circle(radius)
+
+t.done()</code></pre>
+              <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
+            </div>
+          </article>
+
+          <article class="turtle-card" data-card role="button" tabindex="0" aria-label="Copy code for Corner weave" style="--card-accent: #f8b06f;">
+            <div class="preview">
+              <svg class="preview-art" viewBox="0 0 200 200" aria-hidden="true"></svg>
+              <span class="tag">Corner weave</span>
+            </div>
+            <div class="code-overlay">
+              <pre><code>import turtle
+t = turtle.Turtle()
+
+t.speed(0)
+for i in range(16):
+    t.forward(120)
+    t.right(90)
+    t.forward(60)
+    t.right(90)
+    t.right(22.5)
+
+t.done()</code></pre>
+              <span class="copy-hint" role="status" aria-live="polite">Click to copy</span>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 
